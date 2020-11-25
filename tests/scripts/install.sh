@@ -37,7 +37,7 @@ if [ -z "$PULL_NUMBER" ]; then
 else
   if [ $REPO_NAME == "odh-manifests" ]; then
     echo "Setting manifests in kfctl_openshift to use pull number: $PULL_NUMBER"
-    sed -i "s#uri: https://github.com/reetikadevops/odh-manifests/tarball/master#uri: https://api.github.com/repos/opendatahub-io/odh-manifests/tarball/pull/${PULL_NUMBER}/head#" ./kfctl_openshift.yaml
+    sed -i "s#uri: https://github.com/reetikadevops/odh-manifests/tarball/master#uri: https://api.github.com/repos/reetikadevops/odh-manifests/tarball/pull/${PULL_NUMBER}/head#" ./kfctl_openshift.yaml
   fi
 fi
 
